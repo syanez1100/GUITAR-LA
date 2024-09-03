@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+<main class="container-xl mt-5">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-4 col-md-2">
+      <img class="img-fluid" [src]="guitar.url" alt="">
+    </div>
+    <div class="col-8 col-md-4">
+      <h3 class="text-black fs-4 fw-bold">{{guitar.name}}</h3>
+      <p>{{guitar.description}}</p>
+      <p class="fw-black text-primary fs-4">{{guitar.price | currency}}</p>
+
+      <form class="row">
+        <div class="col-12">
+          <div class="form-group">
+            <label for="cantidad" class="form-label">Cantidad</label>
+            <select name="cantidad" id="cantidad" class="form-control">
+              <option value="">-- Seleccione --</option>
+              <option [value]="item" *ngFor="let item of [1,2,3,4,5,6,7,8,9]">{{item}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-12 d-grid">
+          <input type="submit" value="Agregar al carrito" class="btn btn-primary text-white text-uppercase fs-6 mt-4">
+        </div>
+      </form>
+    </div>
+  </div>
+</main>

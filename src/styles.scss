@@ -1,17 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
-// Importar Bootstrap
-// $primary: #900;
-
 $negro: #262626;
-$blanco: #FFF;
+$blanco: #fff;
 $naranja: #e99401;
 
 $primary: $naranja;
 $white: $blanco;
 $dark: $negro;
 
-$fuente-headings: 'Outfit', sans-serif;
-$fuente-textos: 'Outfit', sans-serif;
+$fuente-headings: "Outfit", sans-serif;
+$fuente-textos: "Outfit", sans-serif;
 
 $font-family-base: $fuente-textos;
 $headings-font-family: $fuente-headings;
@@ -36,13 +32,20 @@ $link-hover-color: $white;
 $card-border-radius: 0;
 $card-border-width: 0;
 
+// Inputs
+$input-border-radius: 2rem;
+$input-border-color: $dark;
+
 @use '../src/assets/scss/animations' as *;
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 .background-guitar {
   background-image: linear-gradient(
-    to right, rgb( 0 0 0 / .7), rgb( 0 0 0 / .7)),
-    url('assets/img/header.jpg');
+      to right,
+      rgb(0 0 0 / 0.7),
+      rgb(0 0 0 / 0.7)
+    ),
+    url("assets/img/header.jpg");
   background-position: 50%;
   background-size: cover;
 }
@@ -51,22 +54,22 @@ $card-border-width: 0;
   font-weight: 900;
 }
 
-.navigate{
+.navigate {
   position: relative;
   z-index: 1;
 }
-.navigate:hover{
+.navigate:hover {
   background-color: $primary !important;
 }
 
-.is-active{
+.is-active {
   background-color: rgba($primary, 0.8);
 }
 
-.header-guitar{
+.header-guitar {
   display: none;
 
-  @include media-breakpoint-up(lg){
+  @include media-breakpoint-up(lg) {
     display: block;
     position: absolute;
     right: 0;

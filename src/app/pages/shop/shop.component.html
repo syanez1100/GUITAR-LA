@@ -1,1 +1,23 @@
 <app-header></app-header>
+
+<main class="container-xl mt-5">
+  <h2 class="text-center">Nuestros Productos</h2>
+
+  <section>
+    <div class="row mt-5">
+      <div class="col-md-6 col-lg-4 my-4 row align-items-center" *ngFor="let guitar of guitars">
+        <div class="col-4">
+          <img class="img-fluid" [src]="guitar.url" alt="">
+        </div>
+        <div class="col-8">
+          <h3 class="text-black fs-4 fw-bold">{{guitar.name}}</h3>
+          <p>{{guitar.description}}</p>
+          <p class="fw-black text-primary fs-4">{{guitar.price | currency}}</p>
+          <a href="#" class="bg-black d-block text-center p-2 text-uppercase fw-black" routerLink="/shop/1">Ver Producto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+

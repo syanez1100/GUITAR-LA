@@ -6,6 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
 import { ShopComponent } from './shop/shop.component';
 import { EntradaComponent } from './blog/entrada/entrada.component';
+import { ProductComponent } from './shop/product/product.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,10 @@ const routes: Routes = [
         path: 'shop',
         title: 'Shop',
         component: ShopComponent
+      },
+      {
+        path: 'shop/:id',
+        component: ProductComponent
       },
       {
         path: '', redirectTo: '/', pathMatch: 'full'

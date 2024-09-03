@@ -9,6 +9,7 @@ import { SharedModule } from '../shared/shared.module';
 import { BlogComponent } from './blog/blog.component';
 import { ShopComponent } from './shop/shop.component';
 import { EntradaComponent } from './blog/entrada/entrada.component';
+import { ProductComponent } from './shop/product/product.component';
 
 
 
@@ -19,7 +20,8 @@ import { EntradaComponent } from './blog/entrada/entrada.component';
     AboutComponent,
     BlogComponent,
     ShopComponent,
-    EntradaComponent
+    EntradaComponent,
+    ProductComponent
   ],
   imports: [
     CommonModule,
