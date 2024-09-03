@@ -59,6 +59,10 @@ $card-border-width: 0;
   background-color: $primary !important;
 }
 
+.is-active{
+  background-color: rgba($primary, 0.8);
+}
+
 .header-guitar{
   display: none;
 

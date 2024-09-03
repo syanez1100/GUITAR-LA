@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
 import { ShopComponent } from './shop/shop.component';
+import { EntradaComponent } from './blog/entrada/entrada.component';
 
 const routes: Routes = [
   {
@@ -12,16 +13,27 @@ const routes: Routes = [
     component: PagesComponent,
     children: [
       {
-        path: '', component: HomeComponent
+        path: '',
+        component: HomeComponent
       },
       {
-        path: 'about', component: AboutComponent
+        path: 'about',
+        title: 'Nosotros',
+        component: AboutComponent
       },
       {
-        path: 'blog', component: BlogComponent
+        path: 'blog',
+        title: 'Blog',
+        component: BlogComponent
       },
       {
-        path: 'shop', component: ShopComponent
+        path: 'blog/:id',
+        component: EntradaComponent
+      },
+      {
+        path: 'shop',
+        title: 'Shop',
+        component: ShopComponent
       },
       {
         path: '', redirectTo: '/', pathMatch: 'full'
